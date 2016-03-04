@@ -1,19 +1,57 @@
 .header{
 	margin: 20px 20px 20px 20px;
 	text-align: center;
+	font-size: 170%;
 }
 
 body {
-	padding-top: 200px;
+	padding-top: 20px;
 }
-.autoComplete{
-	width: 50%;
+.mainBody{
  	display: block;
+ 	text-align: center;
   	margin-left: auto;
   	margin-right: auto;
 }
 
-.nextButton {
+.city{
+	display: block;
+	position: absolute;
+	text-align: center;
+	width: 100%;
+}
+.autoComplete{
+	text-align: center;
+	margin: auto;
+	width: 50%;
+}
+.trivia{
+	margin-top: 200px;
+}
+.questions{
+	display: none;
+	opacity: 0;
+	margin-left: auto;
+  	margin-right: auto;
+	text-align: center;
+	position: absolute;
+	width: 100%;
+}
+
+.success{
+	display: none;
+	opacity: 0;
+}
+
+.fail{
+	display: none;
+	opacity: 0;
+}
+.cityText{
+	margin: 20px 20px 20px 20px;
+	text-align: center;
+}
+.nextButton{
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -27,8 +65,26 @@ body {
   width: 200px;
   transition: all 0.5s;
   cursor: pointer;
-  margin-top: 200px;
+  margin-top: 100px;
   z-index: 10000;
+}
+
+.yesButton, .noButton{
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  z-index: 10000;
+}
+
+.yesButton:hover, .noButton:hover{
+	background-color: #f6673c;
 }
 
 .nextButton span {

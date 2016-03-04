@@ -1,4 +1,9 @@
-<md-autocomplete
+<div class="city">
+  <div class="cityText">
+    <h1>Enter the city name where you want to uber in</h1>
+  </div> 
+  <div class="autoComplete">
+    <md-autocomplete
           md-selected-item="vm.selectedItem"
           md-search-text="vm.searchText"
           md-selected-item-change="vm.selectedItemChange(item)"
@@ -6,9 +11,31 @@
           md-item-text="item"
           md-min-length="1"
           placeholder="Where do you want to Uber?">
-  <md-item-template>
-    <span md-highlight-text="vm.searchText" md-highlight-flags="^i">{{item}}</span>
-  </md-item-template>
-</md-autocomplete>
+      <md-item-template>
+        <span md-highlight-text="vm.searchText" md-highlight-flags="^i">{{item}}</span>
+      </md-item-template>
+      <md-not-found>
+        Sorry you cannot Uber in this city at the moment. Please select a valid city to Uber in.
+      </md-not-found>
+  </md-autocomplete>
+  </div>
+  
 
-<button ng-show="vm.nextButton" class="nextButton"><span>Next </span></button>
+  <button ng-click="vm.onNextButtonClick()" ng-show="vm.nextButton" class="nextButton"><span>Next </span></button>
+</div>
+
+<div class="questions">
+  <div class="question">
+    <h1>{{vm.questions[vm.questionIndex]}}</h1>
+  </div>
+  <div class="yesNo">
+    <button ng-click="vm.onYesButtonClick()" class="yesButton"><span>Yes </span></button>
+    <button ng-click="vm.onNoButtonClick()" class="noButton"><span>No </span></button>
+  </div>
+</div>
+<div class="success">
+  <h1>CONGRATS!!! You are eligible to be an Uber Driver!</h1>
+</div>
+<div class="fail">
+  <h1>SORRY!! You cannot be an Uber Driver at the moment!</h1>
+</div>
