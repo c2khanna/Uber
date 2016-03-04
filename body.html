@@ -1,6 +1,6 @@
 <div class="city">
   <div class="cityText">
-    <h1>Enter the city name where you want to uber in</h1>
+    <h1 style="font-weight: 100;">Enter the city name where you want to uber in</h1>
   </div> 
   <div class="autoComplete">
     <md-autocomplete
@@ -19,23 +19,26 @@
       </md-not-found>
   </md-autocomplete>
   </div>
-  
 
   <button ng-click="vm.onNextButtonClick()" ng-show="vm.nextButton" class="nextButton"><span>Next </span></button>
 </div>
 
 <div class="questions">
-  <div class="question">
-    <h1>{{vm.questions[vm.questionIndex]}}</h1>
+  <div class="question questionCurrent">
+    <h1 style="font-weight: 100;">{{vm.questions[vm.questionIndex]}}</h1>
+  </div>
+  <div class="question questionTrans">
+    <h1 style="font-weight: 100;">{{vm.transitionQuestion}}</h1>
   </div>
   <div class="yesNo">
     <button ng-click="vm.onYesButtonClick()" class="yesButton"><span>Yes </span></button>
     <button ng-click="vm.onNoButtonClick()" class="noButton"><span>No </span></button>
   </div>
 </div>
+
 <div class="success">
-  <h1>CONGRATS!!! You are eligible to be an Uber Driver!</h1>
+  <h1 style="font-weight: 100;">CONGRATS!!! <br/>You are eligible to be an Uber Driver!</h1>
 </div>
 <div class="fail">
-  <h1>SORRY!! You cannot be an Uber Driver at the moment!</h1>
+  <h1 style="font-weight: 100;">SORRY!! <br/>You cannot be an Uber Driver at the moment!</h1>
 </div>

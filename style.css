@@ -2,15 +2,19 @@
 	margin: 20px 20px 20px 20px;
 	text-align: center;
 	font-size: 170%;
+	font-weight: lighter;
 }
 
 body {
+	background-image: url("car.jpg");
+	background-size: 100%;
 	padding-top: 20px;
+	color: white;
 }
 .mainBody{
+	margin-left: -30;
  	display: block;
  	text-align: center;
-  	margin-left: auto;
   	margin-right: auto;
 }
 
@@ -23,19 +27,50 @@ body {
 .autoComplete{
 	text-align: center;
 	margin: auto;
-	width: 50%;
+	width: 30%;
 }
 .trivia{
-	margin-top: 200px;
+	margin-top: 300px;
 }
 .questions{
 	display: none;
 	opacity: 0;
-	margin-left: auto;
+	
   	margin-right: auto;
 	text-align: center;
 	position: absolute;
 	width: 100%;
+}
+
+.question.animate {
+	transition: 0.5s all linear;
+}
+
+.questionCurrent {
+	position: relative;
+	opacity: 1;
+	left: 0;
+}
+
+.questionCurrent.animate {
+	left: -50%;
+	opacity: 0;
+}
+
+.questionTrans{
+	text-align: center;
+	margin: auto;
+	position: absolute;
+	width: 100%;
+	top: 0px;
+	left: 50%;
+	opacity: 0;
+}
+
+.questionTrans.animate {
+	display: block;
+	left: 0;
+	opacity: 1;
 }
 
 .success{

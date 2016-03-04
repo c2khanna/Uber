@@ -1,7 +1,8 @@
 angular.module('myApp', ['ngMaterial'])
-.controller('BodyController', function($element) {
+.controller('BodyController', function($element, $timeout) {
 	var vm = this;
 	vm.questions = questions;
+	vm.transitionQuestion;
 	vm.questionIndex = 0;
 	vm.searchText = "";
 	vm.nextButton = false;
@@ -34,7 +35,12 @@ angular.module('myApp', ['ngMaterial'])
     		});
     	}
     	else {
-    		vm.questionIndex++;
+    		vm.transitionQuestion = vm.questions[vm.questionIndex + 1];
+    		$element.find('.question').addClass('animate');
+    		$timeout(function() {
+    			$element.find('.question').removeClass('animate');
+    			vm.questionIndex++;
+    		}, 500);
     	}
     }
 
