@@ -11,8 +11,11 @@ body {
 	padding-top: 20px;
 	color: white;
 }
-.mainBody{
+
+.main{
 	margin-left: -30;
+}
+.mainBody{
  	display: block;
  	text-align: center;
   	margin-right: auto;
