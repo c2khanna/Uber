@@ -6,6 +6,7 @@
 }
 
 body {
+	overflow: hidden;
 	background-image: url("car.jpg");
 	background-size: 100%;
 	padding-top: 20px;
